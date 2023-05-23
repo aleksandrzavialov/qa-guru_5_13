@@ -28,6 +28,7 @@ def test_github_desktop(calculate_resolution):
 
     browser.open('https://github.com')
     browser.element('.HeaderMenu-link--sign-in').click()
+    browser.element('[type="submit"]').click()
 
 
 def test_github_mobile(calculate_resolution):
@@ -39,3 +40,4 @@ def test_github_mobile(calculate_resolution):
     browser.open('https://github.com')
     browser.element('[aria-label="Toggle navigation"] .Button-label').click()
     browser.element('.HeaderMenu-link--sign-in').click()
+    browser.element('[type="submit"]').click()

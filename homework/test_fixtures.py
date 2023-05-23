@@ -30,6 +30,7 @@ def mobile_running(request):
 def test_github_desktop():
     browser.open('https://github.com')
     browser.element('.HeaderMenu-link--sign-in').click()
+    browser.element('[type="submit"]').click()
 
 
 @pytest.mark.usefixtures("mobile_running")
@@ -37,3 +38,4 @@ def test_github_mobile():
     browser.open('https://github.com')
     browser.element('[aria-label="Toggle navigation"] .Button-label').click()
     browser.element('.HeaderMenu-link--sign-in').click()
+    browser.element('[type="submit"]').click()

@@ -34,6 +34,7 @@ iphone11_only = pytest.mark.parametrize("mobile_resolution", [(828, 1792)], indi
 def test_github_desktop(browser_resolution):
     browser.open('https://github.com')
     browser.element('.HeaderMenu-link--sign-in').click()
+    browser.element('[type="submit"]').click()
 
 
 @iphone11_only
@@ -41,3 +42,4 @@ def test_github_mobile(mobile_resolution):
     browser.open('https://github.com')
     browser.element('[aria-label="Toggle navigation"] .Button-label').click()
     browser.element('.HeaderMenu-link--sign-in').click()
+    browser.element('[type="submit"]').click()
